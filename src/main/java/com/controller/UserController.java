@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * Created by moooke on 2019/4/23.
+ * Created by moooke on 2019/4/23.注意看配置文件信息
  */
 @RestController
 @RequestMapping("/user")
