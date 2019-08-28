@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="第一套Suite">
+<test name="Test1测试配置">
+    <groups>
+        <define name="part">
+            <include name="第二组" />
+        </define>
+        <define name="all">
+            <include name="第一组" />
+            <include name="第二组" />
+        </define>
+
+        <run>
+            <include name="all" />
+        </run>
+    </groups>
+
+    <classes>
+        <class name="com.testng.TestMain"/>
+        <class name="com.testng.TestTwo"/>
+        <class name="com.testng.TestThree">
+            <methods>
+                <include name="simpleCase1" />
+                <include name="simpleCase2" />
+            </methods>
+        </class>
+    </classes>
+</test>
+</suite>
