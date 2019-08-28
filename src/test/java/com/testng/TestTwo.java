@@ -33,7 +33,7 @@ public class TestTwo {
         logger.info("---beforeTest---在运行属于<test>标记内的类的任何测试方法之前之前运行");
     }
 
-    @BeforeMethod
+    @BeforeMethod(groups = "第一组")
     public void beforeMethod(){
         logger.info("---beforeMethod---在每一个测试方法之前运行");
     }
