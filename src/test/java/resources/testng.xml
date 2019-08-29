@@ -1,85 +1,85 @@
-<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<?xml version="1.0" encoding="UTF-8"?>
 
-<!--<suite name="默认 Suite">-->
-    <!--<test name="第一套测试配置">-->
-        <!--&lt;!&ndash;<groups>&ndash;&gt;-->
-        <!--&lt;!&ndash;<define name="part">&ndash;&gt;-->
-        <!--&lt;!&ndash;<include name="第二组" />&ndash;&gt;-->
-        <!--&lt;!&ndash;</define>&ndash;&gt;-->
-        <!--&lt;!&ndash;<define name="all">&ndash;&gt;-->
-        <!--&lt;!&ndash;<include name="第一组" />&ndash;&gt;-->
-        <!--&lt;!&ndash;<include name="第二组" />&ndash;&gt;-->
-        <!--&lt;!&ndash;</define>&ndash;&gt;-->
-
-        <!--&lt;!&ndash;<run>&ndash;&gt;-->
-        <!--&lt;!&ndash;<include name="all" />&ndash;&gt;-->
-        <!--&lt;!&ndash;</run>&ndash;&gt;-->
-        <!--&lt;!&ndash;</groups>&ndash;&gt;-->
-
-        <!--<classes>-->
-            <!--<class nacom.TestMainMain"/>-->
-            <!--<class nacom.TestTwotTwo"/>-->
-            <!--<class nacom.TestThreehree">-->
-                <!--<methods>-->
-                    <!--<include name="simpleCase1"/>-->
-                    <!--<include name="simpleCase2"/>-->
-                <!--</methods>-->
-            <!--</class>-->
-        <!--</classes>-->
-    <!--</test>-->
-
-
-    <!--<test name="第二套测试配置">-->
+<suite name="默认 Suite">
+    <test name="第一套测试配置">
         <!--<groups>-->
-            <!--<define name="part">-->
-                <!--<include name="第二组"/>-->
-            <!--</define>-->
-            <!--<define name="part-two">-->
-                <!--<include name="第一组"/>-->
-                <!--<exclude name="第二组"/>-->
-            <!--</define>-->
+        <!--<define name="part">-->
+        <!--<include name="第二组" />-->
+        <!--</define>-->
+        <!--<define name="all">-->
+        <!--<include name="第一组" />-->
+        <!--<include name="第二组" />-->
+        <!--</define>-->
 
-            <!--<run>-->
-                <!--<include name="all"/>-->
-            <!--</run>-->
+        <!--<run>-->
+        <!--<include name="all" />-->
+        <!--</run>-->
         <!--</groups>-->
 
-        <!--<classes>-->
-            <!--<class nacom.TestMainMain"/>-->
-            <!--<class nacom.TestTwotTwo"/>-->
-            <!--<class nacom.TestThreehree">-->
-                <!--<methods>-->
-                    <!--<include name="simpleCase1"/>-->
-                    <!--<include name="simpleCase2"/>-->
-                <!--</methods>-->
-            <!--</class>-->
-        <!--</classes>-->
-    <!--</test>-->
+        <classes>
+            <class nacom.TestMainMain"/>
+            <class nacom.TestTwotTwo"/>
+            <class nacom.TestThreehree">
+                <methods>
+                    <include name="simpleCase1"/>
+                    <include name="simpleCase2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
 
-    <!--<test name="第三套测试配置">-->
-        <!--<groups>-->
-            <!--<define name="part">-->
-                <!--<include name="第二组"/>-->
-            <!--</define>-->
-            <!--<define name="all">-->
-                <!--<include name="第一组"/>-->
-                <!--<include name="第二组"/>-->
-            <!--</define>-->
+    <test name="第二套测试配置">
+        <groups>
+            <define name="part">
+                <include name="第二组"/>
+            </define>
+            <define name="part-two">
+                <include name="第一组"/>
+                <exclude name="第二组"/>
+            </define>
 
-            <!--<run>-->
-                <!--<include name="all"/>-->
-            <!--</run>-->
-        <!--</groups>-->
+            <run>
+                <include name="all"/>
+            </run>
+        </groups>
 
-        <!--<classes>-->
-            <!--<class nacom.TestTwotTwo"/>-->
-            <!--<class nacom.TestThreehree">-->
-                <!--<methods>-->
-                    <!--<include name="simpleCase1"/>-->
-                    <!--<include name="simpleCase2"/>-->
-                <!--</methods>-->
-            <!--</class>-->
-        <!--</classes>-->
-    <!--</test>-->
-<!--</suite>-->
+        <classes>
+            <class nacom.TestMainMain"/>
+            <class nacom.TestTwotTwo"/>
+            <class nacom.TestThreehree">
+                <methods>
+                    <include name="simpleCase1"/>
+                    <include name="simpleCase2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="第三套测试配置">
+        <groups>
+            <define name="part">
+                <include name="第二组"/>
+            </define>
+            <define name="all">
+                <include name="第一组"/>
+                <include name="第二组"/>
+            </define>
+
+            <run>
+                <include name="all"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class nacom.TestTwotTwo"/>
+            <class nacom.TestThreehree">
+                <methods>
+                    <include name="simpleCase1"/>
+                    <include name="simpleCase2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

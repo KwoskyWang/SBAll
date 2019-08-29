@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 
 /**
  * 这三个类都是用来测试 TestNG 的核心注释的作用范围
+ * 包括: BeforeSuite, BeforeGroups, BeforeClass, BeforeTest, BeforeMethod, After....
  * Created by moooke on 2019/8/28.
  */
 @SpringBootTest

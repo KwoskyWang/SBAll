@@ -17,6 +17,10 @@ import org.testng.annotations.Test;
  * 继承 AbstractTestNGSpringContextTests后可以访问到 protected 的成员变量：applicationContext
  * 然后我们就可以进行显式的 bean 查找或测试整个上下文的状态
  *
+ * <-- 这个是用来测试 dataProvider的 -->
+ *     如果需要传递复杂参数或需要从Java创建的参数（复杂对象，从属性文件或数据库读取的对象等等），
+ *     则在testng.xml中指定参数可能不够。在这种情况下，您可以使用数据提供程序提供测试所需的值。
+ *     数据提供程序是类上的一个方法，它返回一组对象数组。此方法使用@DataProvider注释
  */
 @SpringBootTest
 public class DataProviders extends BaseTest {  //如果不继承BaseTest类会发生不能注入Bean的情况

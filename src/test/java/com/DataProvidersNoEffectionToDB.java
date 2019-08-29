@@ -47,6 +47,7 @@ public class DataProvidersNoEffectionToDB extends BaseTestNoEffectionToDB {
      * 这里是不能够去 new一个Service出来的
      * 因为 @autowire跟XML方式注入类似，是Ioc容器负责创建新的实例.
      * 如果我们自己去 new 一个对象, 新对象的依赖变量都是没有注入的.
+     * <-- 这里的执行不会影响到数据库, SQL在执行之后会回滚 -->
      */
     @Test(dataProvider = "转账")
     public void TransferTest(UserTransfer transfer){

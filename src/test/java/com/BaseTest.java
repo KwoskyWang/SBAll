@@ -10,7 +10,11 @@ import java.io.*;
 import java.lang.reflect.Method;
 
 /**
+ * 继承 AbstractTestNGSpringContextTests后可以访问到 protected 的成员变量：applicationContext
+ * 然后我们就可以进行显式的 bean 查找或测试整个上下文的状态
  * Created by moooke on 2019/8/29.
+ *
+ * <-- 这个类是用来与我们的 resources->param下面的配置文件挂钩, 并把配置文件中的json数据解析出来装到 dataProvider里面的. -->
  */
 @ContextConfiguration
 public class BaseTest extends AbstractTestNGSpringContextTests {

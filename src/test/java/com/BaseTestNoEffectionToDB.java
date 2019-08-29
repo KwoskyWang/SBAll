@@ -11,7 +11,10 @@ import java.io.*;
 import java.lang.reflect.Method;
 
 /**
+ * 继承 AbstractTransactionalTestNGSpringContextTests 的测试用例会对数据库操作自动回滚,不会影响数据库数据.
  * Created by moooke on 2019/8/29.
+ *
+ * <-- 这个类和 BaseTest的唯一区别就是继承的类不一样 -->
  */
 @ContextConfiguration
 public class BaseTestNoEffectionToDB extends AbstractTransactionalTestNGSpringContextTests {
