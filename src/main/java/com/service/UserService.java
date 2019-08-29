@@ -52,7 +52,7 @@ public class UserService {
     }
 
     /**
-     * 模拟事务。由于加上了 @Transactional注解，如果转账中途出了意外 SnailClimb 和 Daisy 的钱都不会改变。
+     * 模拟事务。由于加上了 @Transactional注解，如果转账中途出了意外 Transfer 和 Receiver 的钱都不会改变。
      */
     @Transactional
     public void transferMoney(UserTransfer userTransfer) {

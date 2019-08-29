@@ -1,4 +1,4 @@
-package com.testng;
+package com.testng.lifecycle;
 
 import org.springframework.boot.test.context.SpringBootTest;
 import org.testng.annotations.*;
@@ -6,12 +6,13 @@ import org.testng.annotations.*;
 import java.util.logging.Logger;
 
 /**
+ * 这三个类都是用来测试 TestNG 的核心注释的作用范围
  * Created by moooke on 2019/8/28.
  */
 @SpringBootTest
-public class TestTwo {
+public class TestThree {
 
-    Logger logger = Logger.getLogger("TestTwo的Log信息.");
+    Logger logger = Logger.getLogger("TestThree的Log信息.");
 
     @BeforeGroups
     public void beforeGroup(){
@@ -33,22 +34,22 @@ public class TestTwo {
         logger.info("---beforeTest---在运行属于<test>标记内的类的任何测试方法之前之前运行");
     }
 
-    @BeforeMethod(groups = "第一组")
+    @BeforeMethod
     public void beforeMethod(){
         logger.info("---beforeMethod---在每一个测试方法之前运行");
     }
 
-    @Test(groups = {"第一组","第二组"})
+    @Test
     public void simpleCase1(){
         logger.info("simpleCase1 第一个测试用例");
     }
 
-    @Test(groups = {"第一组","第二组"})
+    @Test
     public void simpleCase2(){
         logger.info("simpleCase2 第二个测试用例");
     }
 
-    @Test(groups = {"第一组"})
+    @Test
     public void simpleCase3(){
         logger.info("simpleCase3 第三个测试用例");
     }
