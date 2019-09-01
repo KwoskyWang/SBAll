@@ -1,0 +1,71 @@
+<suite name="默认 Suite" data-provider-thread-count="2">
+<!-- data-provider-thread-count 用作线程池数量配置 -->
+
+<test name="第一套测试配置">
+    <classes>
+        <class name="com.testng.lifecycle.TestMain"/>
+        <class name="com.testng.lifecycle.TestTwo"/>
+        <class name="com.testng.lifecycle.TestThree">
+            <methods>
+                <include name="simpleCase1"/>
+                <include name="simpleCase2"/>
+            </methods>
+        </class>
+    </classes>
+</test>
+
+
+<test name="第二套测试配置">
+    <groups>
+        <define name="part">
+            <include name="第二组"/>
+        </define>
+        <define name="all">
+            <include name="第一组"/>
+            <include name="第二组"/>
+        </define>
+
+        <run>
+            <include name="all"/>
+        </run>
+    </groups>
+
+    <classes>
+        <class name="com.testng.lifecycle.TestMain"/>
+        <class name="com.testng.lifecycle.TestTwo"/>
+        <class name="com.testng.lifecycle.TestThree">
+            <methods>
+                <include name="simpleCase1"/>
+                <include name="simpleCase2"/>
+            </methods>
+        </class>
+    </classes>
+</test>
+
+
+<test name="第三套测试配置">
+    <groups>
+        <define name="part">
+            <include name="第二组"/>
+        </define>
+        <define name="all">
+            <include name="第一组"/>
+            <exclude name="第二组"/>
+        </define>
+
+        <run>
+            <include name="all"/>
+        </run>
+    </groups>
+
+    <classes>
+        <class name="com.testng.lifecycle.TestTwo"/>
+        <class name="com.testng.lifecycle.TestThree">
+            <methods>
+                <include name="simpleCase1"/>
+                <include name="simpleCase2"/>
+            </methods>
+        </class>
+    </classes>
+</test>
+</suite>

@@ -15,16 +15,14 @@ import java.lang.reflect.Method;
  * Created by moooke on 2019/8/29.
  *
  * <-- 这个类是用来与我们的 resources->param下面的配置文件挂钩, 并把配置文件中的json数据解析出来装到 dataProvider里面的. -->
+ *
+ * <-- 通过配置文件我们还可以实现参数化的 测试用例数据 迭代设置 -->
  */
 @ContextConfiguration
 public class BaseTest extends AbstractTestNGSpringContextTests {
 
-    @DataProvider(name = "readTestData")
+    @DataProvider(name = "readTestData", parallel = true)
     public Object[][] testData(Method testMethod) {
-
-        if (testMethod.getName().equals("testChooseShift")) {
-            return new Object[][]{new Object[]{135001}};
-        }
 
         String className = testMethod.getDeclaringClass().getSimpleName();
 

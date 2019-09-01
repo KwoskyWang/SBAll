@@ -59,4 +59,19 @@ public class DataProviders extends BaseTest {  //如果不继承BaseTest类会�
         System.out.println(transfer);
         userService.transferMoney(transfer);
     }
+
+
+    /**
+     *
+     * @param transfer
+     * 这里是不能够去 new一个Service出来的
+     * 因为 @autowire跟XML方式注入类似，是Ioc容器负责创建新的实例.
+     * 如果我们自己去 new 一个对象, 新对象的依赖变量都是没有注入的.
+     */
+    @Test(dataProvider = "转账",retryAnalyzer = MyRetry.class)
+    public void TransferTestRetry(UserTransfer transfer){
+        System.out.println(transfer);
+        userService.transferMoney(transfer);
+
+    }
 }

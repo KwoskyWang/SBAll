@@ -35,22 +35,22 @@ public class TestTwo {
         logger.info("---beforeTest---在运行属于<test>标记内的类的任何测试方法之前之前运行");
     }
 
-    @BeforeMethod(groups = "第一组")
+    @BeforeMethod
     public void beforeMethod(){
         logger.info("---beforeMethod---在每一个测试方法之前运行");
     }
 
-    @Test(groups = {"第一组","第二组"})
+    @Test(groups = {"第一组"})
     public void simpleCase1(){
         logger.info("simpleCase1 第一个测试用例");
     }
 
-    @Test(groups = {"第一组","第二组"})
+    @Test
     public void simpleCase2(){
         logger.info("simpleCase2 第二个测试用例");
     }
 
-    @Test(groups = {"第一组"})
+    @Test
     public void simpleCase3(){
         logger.info("simpleCase3 第三个测试用例");
     }

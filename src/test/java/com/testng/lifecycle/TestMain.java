@@ -16,14 +16,14 @@ public class TestMain {
 
     Logger logger = Logger.getLogger("测试类的Log信息.");
 
-    @BeforeGroups(groups = "第一组")
-    public void beforeGroup(){
-        logger.info("---beforeGroup---在Group的第一个测试方法之前运行");
-    }
-
     @BeforeSuite
     public void beforeSuite(){
         logger.info("---beforeSuite---在Suite之前运行");
+    }
+
+    @BeforeGroups
+    public void beforeGroup(){
+        logger.info("---beforeGroup---在Group的第一个测试方法之前运行");
     }
 
     @BeforeClass
@@ -76,7 +76,7 @@ public class TestMain {
         logger.info("---afterTest---在运行属于<test>标记内的类的任何测试方法之前之后运行");
     }
 
-    @AfterGroups(groups = "第一组")
+    @AfterGroups
     public void afterGroup(){
         logger.info("---afterGroup---在Group的最后一个测试方法之后运行");
     }

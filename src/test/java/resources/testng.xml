@@ -1,25 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<suite name="默认 Suite">
+<suite name="First Suite">
+<listeners>
+    <listener class-name="com.ListenerTest" />
     <test name="第一套测试配置">
-        <!--<groups>-->
-        <!--<define name="part">-->
-        <!--<include name="第二组" />-->
-        <!--</define>-->
-        <!--<define name="all">-->
-        <!--<include name="第一组" />-->
-        <!--<include name="第二组" />-->
-        <!--</define>-->
-
-        <!--<run>-->
-        <!--<include name="all" />-->
-        <!--</run>-->
-        <!--</groups>-->
-
         <classes>
-            <class nacom.TestMainMain"/>
-            <class nacom.TestTwotTwo"/>
-            <class nacom.TestThreehree">
+            <class name="com.testng.lifecycle.TestMain"/>
+            <class name="com.testng.lifecycle.TestTwo"/>
+            <class name="com.testng.lifecycle.TestThree">
                 <methods>
                     <include name="simpleCase1"/>
                     <include name="simpleCase2"/>
@@ -27,59 +13,8 @@
             </class>
         </classes>
     </test>
-
-
-    <test name="第二套测试配置">
-        <groups>
-            <define name="part">
-                <include name="第二组"/>
-            </define>
-            <define name="part-two">
-                <include name="第一组"/>
-                <exclude name="第二组"/>
-            </define>
-
-            <run>
-                <include name="all"/>
-            </run>
-        </groups>
-
-        <classes>
-            <class nacom.TestMainMain"/>
-            <class nacom.TestTwotTwo"/>
-            <class nacom.TestThreehree">
-                <methods>
-                    <include name="simpleCase1"/>
-                    <include name="simpleCase2"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-
-
-    <test name="第三套测试配置">
-        <groups>
-            <define name="part">
-                <include name="第二组"/>
-            </define>
-            <define name="all">
-                <include name="第一组"/>
-                <include name="第二组"/>
-            </define>
-
-            <run>
-                <include name="all"/>
-            </run>
-        </groups>
-
-        <classes>
-            <class nacom.TestTwotTwo"/>
-            <class nacom.TestThreehree">
-                <methods>
-                    <include name="simpleCase1"/>
-                    <include name="simpleCase2"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+        </listeners>
 </suite>
+
+
+

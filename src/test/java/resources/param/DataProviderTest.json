@@ -3,7 +3,17 @@
                 [
                         "binbin",
                         "haijin",
-                        1000
+                        100
+                ],
+                [
+                        "haijin",
+                        "binbin",
+                        200
+                ],
+                [
+                        "binbin",
+                        "haijin",
+                        300
                 ]
         ]
 }

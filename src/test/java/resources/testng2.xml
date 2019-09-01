@@ -1,0 +1,25 @@
+<suite name="默认 Suite" >
+
+<test name="第二套测试配置">
+    <groups>
+        <define name="part">
+            <include name="第二组"/>
+        </define>
+        <define name="all">
+            <include name="第一组"/>
+            <exclude name="第二组"/>
+        </define>
+
+        <run>
+            <include name="all"/>
+        </run>
+    </groups>
+
+    <classes>
+        <class name="com.testng.lifecycle.TestMain"/>
+        <class name="com.testng.lifecycle.TestTwo"/>
+        <class name="com.testng.lifecycle.TestThree"/>
+    </classes>
+</test>
+
+</suite>

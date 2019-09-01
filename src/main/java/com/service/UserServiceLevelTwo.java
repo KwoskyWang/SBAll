@@ -56,7 +56,7 @@ public class UserServiceLevelTwo {
         userDao.updateUser(userTransfer.getName(), userTransfer.getSalary());
         // 模拟转账过程中可能遇到的意外状况
         log.info("进行转账");
-//        int i = 1/0;
+        int i = 1/0;
         userDao.updateReceiverUser(userTransfer.getReceiver(),userTransfer.getSalary());
         log.info("转账成功");
     }

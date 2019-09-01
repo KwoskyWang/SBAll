@@ -10,6 +10,7 @@ import java.util.logging.Logger;
  * Created by moooke on 2019/8/28.
  */
 @SpringBootTest
+@Test(groups = "第二组")
 public class TestThree {
 
     Logger logger = Logger.getLogger("TestThree的Log信息.");
