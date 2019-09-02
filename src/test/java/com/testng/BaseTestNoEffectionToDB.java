@@ -1,4 +1,4 @@
-package com;
+package com.testng;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;

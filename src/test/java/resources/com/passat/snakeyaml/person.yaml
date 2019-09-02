@@ -1,0 +1,13 @@
+# --- 表示要开启另一段yaml配置
+# !!  表示要强制转换下面的参数配置到指定的类
+# 这里的进位一定要注意, 不然是无法识别属性的归属的.
+--- !!com.passat.snakeyaml.Person
+given  : Chris
+family : Dumars
+address:
+    lines: |
+        458 Walkman Dr.
+        Suite #292
+    city    : Royal Oak
+    state   : MI
+    postal  : 48046

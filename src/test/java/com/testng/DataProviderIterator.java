@@ -1,4 +1,4 @@
-package com;
+package com.testng;
 
 import com.bean.UserTransfer;
 import org.springframework.boot.test.context.SpringBootTest;

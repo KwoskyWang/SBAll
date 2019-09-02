@@ -1,6 +1,5 @@
-package com;
+package com.testng;
 
-import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.testng.annotations.Test;
 

@@ -1,6 +1,6 @@
 <suite name="First Suite">
 <listeners>
-    <listener class-name="com.ListenerTest" />
+    <listener class-name="com.testng.ListenerTest" />
     <test name="第一套测试配置">
         <classes>
             <class name="com.testng.lifecycle.TestMain"/>

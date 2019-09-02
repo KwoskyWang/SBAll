@@ -1,13 +1,10 @@
-package com;
+package com.testng;
 
-import com.BaseTest;
 import com.bean.UserTransfer;
 import com.service.UserService;
 import com.service.UserServiceLevelTwo;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
