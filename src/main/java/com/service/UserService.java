@@ -21,6 +21,10 @@ public class UserService {
 
     @Autowired
     private UserServiceLevelTwo userServiceLevelTwo;
+
+    @Autowired
+    private TransferRecordService transferRecordService;
+
     Logger log = Logger.getLogger("userServiceLevel 的日志");
 
     /**
@@ -40,7 +44,7 @@ public class UserService {
     /**
      * 插入两个用户
      */
-    public void insertService(String name,int age,double salary) {
+    public void insertService(String name, int age, double salary) {
         userDao.insertUser(name, age, salary);
     }
 
@@ -57,6 +61,7 @@ public class UserService {
     @Transactional
     public void transferMoney(UserTransfer userTransfer) {
         log.info("一通操作,然后把对象交给下一个Service.");
-        userServiceLevelTwo.transferMoney(userTransfer);
+//        userServiceLevelTwo.transferMoney(userTransfer);
+        transferRecordService.transferRecord(userTransfer);
     }
 }

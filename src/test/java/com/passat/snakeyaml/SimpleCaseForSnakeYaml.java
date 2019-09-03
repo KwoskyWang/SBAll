@@ -71,6 +71,7 @@ public class SimpleCaseForSnakeYaml {
 
     /**
      * 通过创建Yaml对象的时候,传入了一个new Constructor(Person.class)指定对象,省去在yaml文件中进行配置
+     * 通过更改配置文件自动识别参数类型
      */
     @Test
     public void testPerson2() throws Exception {
