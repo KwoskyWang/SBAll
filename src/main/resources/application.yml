@@ -1,0 +1,24 @@
+server.port: 8081
+
+spring.datasource.url: jdbc:mysql://localhost:3306/test?zeroDateTimeBehavior=convertToNull&autoReconnect=true&autoReconnectForPools=true&useUnicode=true&characterEncoding=utf8&useSSL=false
+spring.datasource.username: root
+spring.datasource.password: 123456
+spring.datasource.driver-class-name: com.mysql.cj.jdbc.Driver
+
+demo.hello: Yello Duck..
+
+logging.level.com.dao: debug
+
+  #配置redis
+spring.redis.host: 127.0.0.1
+spring.redis.port: 6379
+
+#数据库选项#测试用例初始化请求头
+product: {1:'peanut',4:'erp'}
+
+db.header.ds: $
+db.header.erp: {"langCode":"en-TH","token":"${db.header.ds}{customerToken}"}
+db.header.peanut: {"peanutAccessToken":"${db.header.ds}{peanutHelperInfoCollectToken}"}
+
+db.postscript: |
+  Assert.assertTrue(result.isSuccess());

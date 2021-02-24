@@ -1,13 +1,16 @@
 package com.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by moooke on 2019/4/23.
  */
-public class User {
+public class User implements Serializable {
     private int id;
     private String name;
     private int age;
     private double salary;
+    private static final long serialVersionUID=1L;
 
     public int getId() {
         return id;

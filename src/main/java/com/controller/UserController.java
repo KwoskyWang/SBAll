@@ -1,6 +1,5 @@
 package com.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.bean.User;
 import com.bean.UserTransfer;
 import com.service.UserService;
@@ -12,6 +11,7 @@ import java.util.List;
 /**
  * Created by moooke on 2019/4/23.注意看配置文件信息
  */
+//@Controller
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -21,7 +21,17 @@ public class UserController {
 
     @RequestMapping("/query")
     public List<User> testQuery() {
+        for (User user : userService.selectUserByName("Daisy")) {
+            System.out.println("name" + user.getName());
+            System.out.println("age" + user.getAge());
+            System.out.println("salary" + user.getSalary());
+        }
         return userService.selectUserByName("Daisy");
+    }
+
+    @RequestMapping("/update")
+    public List<User> testUpdate() {
+        return userService.updateUserByName("Daisy");
     }
 
     @RequestMapping("/test")
@@ -31,11 +41,10 @@ public class UserController {
 
     @GetMapping("/insert")
     public List<User> testInsert(
-    @RequestParam(value = "name", required = true)String name,
-    @RequestParam(value = "age", required = false)int age,
-    @RequestParam(value = "salary", required = false)double salary)
-    {
-        userService.insertService(name,age,salary);
+            @RequestParam(value = "name", required = true) String name,
+            @RequestParam(value = "age", required = false) int age,
+            @RequestParam(value = "salary", required = false) double salary) {
+        userService.insertService(name, age, salary);
         return userService.selectAllUser();
     }
 
@@ -48,7 +57,7 @@ public class UserController {
 
     @RequestMapping("/delete")
     public String testDelete() {
-        userService.deleteService(3);
+        userService.deleteService(28);
         return "OK";
     }
 

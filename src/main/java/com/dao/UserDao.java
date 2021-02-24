@@ -10,11 +10,19 @@ import java.util.List;
  */
 @Mapper
 public interface UserDao {
+
     /**
      * 通过名字查询用户信息
      */
     @Select("SELECT * FROM user WHERE name = #{name}")
     List<User> findUserByName(@Param("name") String name);
+
+
+    /**
+     * 通过名字更新用户信息
+     */
+    @Select("update user set salary=5000 where name = #{name}")
+    List<User> updateUserByName(@Param("name") String name);
 
     /**
      * 查询所有用户信息

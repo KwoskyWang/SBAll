@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class TransferRecordServiceImpl implements TransferRecordService {
 
+
     public void transferRecord(UserTransfer userTransfer){
         System.out.println("转账人:"+userTransfer.getName());
         System.out.println("收款人:"+userTransfer.getReceiver());

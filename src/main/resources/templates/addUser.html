@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+</head>
+<body>
+<!--/*@thymesVar id="jdbcUser" type="com.bean.JdbcUser"*/-->
+<form action="#" th:action="@{/user/addUser}" method="post" th:object="${jdbcUser}">
+    <p>Name: <input type="text" th:field="*{name}"/></p>
+    <p>Age: <input type="text" th:field="*{age}"/></p>
+    <p>Salary: <input type="text" th:field="*{salary}"/></p>
+    <input type="submit" value="ok">
+</form>
+</body>
+</html>
